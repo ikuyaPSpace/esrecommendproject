@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block content %}
+<div class="jumbotron" style="margin-bottom: 30px; text-align: center; color: #31beca; font-weight: bold;">
+  <h1 class="display-4">千葉県</h1>
+</div>
+  <div class="container">
+      {% for item in object_list reversed %}
+      <div class="card" style="margin-bottom: 30px; text-align: center;">
+          <h5 class="card-header">{{ item.invest_place }}</h5>
+          <div class="card-body">
+              <h5 class="card-title" style="margin-bottom: 20px">価格：<font size="+3">{{ item.invest_price }}</font></h5>
+              </font><h5 class="card-title" style="margin-bottom: 20px">利回り：<font size="+3">{{ item.invest_yield }}</font></h5>
+              <h5 class="card-title" style="margin-bottom: 30px">築年数：<font size="+3">{{ item.invest_age }}</font></h5>
+              <a href={{ item.URL }} class="link" target="_blank" rel="noopener noreferrer" style="text-decoration: none; background: #31beca; padding: 14px 20px; display: inline-block; color: #fff; border-radius: 5px; margin-bottom: 30px; font-weight: bold;"; color: #fff; border-radius: 5px;>物件リンク</a>
+              <h6 class="card-title">登録日：{{ item.postdate }}</h6>
+              <h6 class="card-title">ID：{{ item.id }}</h6>
+          </div>
+      </div>
+      {% endfor %}
+  </div>
+ {% endblock content %}

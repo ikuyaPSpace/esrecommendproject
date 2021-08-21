@@ -1,0 +1,46 @@
+@charset "utf-8";
+.menu {
+    padding: 90px 0 60px;
+    color: #5a5c5f;
+}
+.menu-card {
+    width: 100%;
+    margin-top: 35px;
+}
+.menu-card-inner {
+    padding: 10px 10px;
+    background-color: #dbe0e4;
+    border-radius: 7px;
+    box-shadow: 1px 1px 4px #d2d4d6;
+    text-align: center;
+    margin: 0 20px;
+}
+.menu-image {
+    width: 70%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.menu-title {
+    margin-bottom: 8px;
+}
+.menu-text {
+    font-size: 14px;
+}
+.menu-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+td, th {
+    border: 1px solid #b7b7b7;
+    padding: 6px 10px;
+}
+/*1列目だけ*/
+tr td:nth-child(1){
+    font-weight:  bold;
+}
